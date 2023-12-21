@@ -1,0 +1,44 @@
+.container-fluid {
+  background-image: url("../../assets//bg.png");
+  height: 100vh;
+}
+.nav {
+  color: #d4a373;
+  height: auto;
+  width: 100%;
+  font-size: 1.7rem;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
+}
+.heading {
+  text-align: center;
+  font-size: 7rem;
+  letter-spacing: 0.5rem;
+}
+.rotate-text {
+  writing-mode: vertical-rl;
+  transform: rotate(360deg);
+  font-size: 7rem;
+}
+.text-border {
+  -webkit-text-stroke: 1px black; /* WebKit browsers */
+  text-stroke: 1px black; /* Standard */
+  color: transparent; /* Text color */
+}
+
+.arrow {
+  width: 263px;
+  height: 100px;
+}
+.arrow.out {
+  -webkit-text-stroke: 1px black;
+  color: transparent; /* Text color */
+}
+
+.square {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 180px;
+  height: 180px;
+  background-color: #5b7c7d;
+}

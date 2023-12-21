@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import Spinner from "../components/Spinner";
-import { Link } from "react-router-dom";
-import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
-import { MdOutlineModeEdit, MdDeleteOutline } from "react-icons/md";
-import { IoIosInformationCircleOutline } from "react-icons/io";
+import React, { useEffect, useState } from "react"
+import axios from "axios"
+import Spinner from "../../components/Spinner"
+import { Link } from "react-router-dom"
+import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md"
+import { MdOutlineModeEdit, MdDeleteOutline } from "react-icons/md"
+import { IoIosInformationCircleOutline } from "react-icons/io"
 
 const Home = () => {
-  const [books, setBooks] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [books, setBooks] = useState([])
+  const [loading, setLoading] = useState(false)
   // useEffect(() => {
   //   setLoading(true);
   //   axios
@@ -45,7 +45,7 @@ const Home = () => {
       Operations: "Scneneneeeee",
     },
     // Add more data entries as needed...
-  ];
+  ]
 
   return (
     <div className="p-4">
@@ -93,10 +93,10 @@ const Home = () => {
                       <IoIosInformationCircleOutline />
                     </Link>
                     <Link to={`books/edit/${data.No}`} target="_blank">
-                      <MdOutlineModeEdit/>
+                      <MdOutlineModeEdit />
                     </Link>
                     <Link to={`books/delete/${data.No}`} target="_blank">
-                      <MdDeleteOutline/>
+                      <MdDeleteOutline />
                     </Link>
                   </div>
                 </td>
@@ -106,7 +106,7 @@ const Home = () => {
         </table>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
