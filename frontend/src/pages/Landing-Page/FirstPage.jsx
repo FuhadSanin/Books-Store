@@ -51,12 +51,7 @@ const FirstPage = () => {
           </div>
         </div>
         <div className="row mt-2">
-          <div className="col-6 d-flex justify-content-center align-items-center flex-column">
-            <img src={bookShelf} alt="image" />
-            <br />
-            <h2 className="text-center display-2 unleash-text">UNLEASHED</h2>
-          </div>
-          <div className="col-6 d-flex justify-content-start align-items-center flex-row ps-5">
+          <div className="col-3 lg:hidden d-flex justify-content-start align-items-center flex-row ">
             <h1
               className={`rotate-text text-border ps-5 pe-4 mb-4 ${
                 shouldAnimate ? "book-scroll-animation" : ""
@@ -64,13 +59,18 @@ const FirstPage = () => {
             >
               BOOK
             </h1>
-            <div className="d-flex justify-content-start align-items-center flex-column">
-              <AiOutlineDown className="arrow" />
-              <AiOutlineDown className="arrow" />
-              <AiOutlineDown className="arrow" />
-              <CircularText />
-              <div className="left_arrow"></div>
-            </div>
+          </div>
+          <div className="col-6 d-flex justify-content-center align-items-center flex-column">
+            <img src={bookShelf} alt="image" />
+            <br />
+            <h2 className="text-center display-2 unleash-text">UNLEASHED</h2>
+          </div>
+          <div className="col-3 d-flex justify-content-start align-items-center flex-column lg:hidden">
+            <AiOutlineDown className="arrow" />
+            <AiOutlineDown className="arrow" />
+            <AiOutlineDown className="arrow" />
+            <CircularText />
+            <div className="left_arrow"></div>
           </div>
         </div>
       </div>
