@@ -1,4 +1,6 @@
 let books
+import { ObjectId } from "mongodb"
+
 export default class BooksDAO {
   static async injectDB(conn) {
     if (books) {
@@ -38,6 +40,32 @@ export default class BooksDAO {
         `Unable to convert cursor to array or problem counting documents, ${e}`
       )
       return { booksList: [], totalNumBooks: 0 }
+    }
+  }
+  static async sellBooks(
+    title,
+    author,
+    discountedPrice,
+    description,
+    imageUrl,
+    actualPrice,
+    percentageOff
+  ) {
+    try {
+      const bookinfo = {
+        _id: new ObjectId(),
+        title: title,
+        author: author,
+        discount_price: discountedPrice,
+        description: description,
+        imageUrl: imageUrl,
+        actual_price: actualPrice,
+        percentage_off: percentageOff,
+      }
+      return await books.insertOne(bookinfo)
+    } catch (e) {
+      console.error(`Unable to post book: ${e}`)
+      return { error: e }
     }
   }
 }
