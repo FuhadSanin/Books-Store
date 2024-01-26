@@ -4,6 +4,7 @@ import { bookShelf } from "../../assets"
 import { AiOutlineDown } from "react-icons/ai"
 import "./FirstPage.css"
 import { CircularText } from "../../components"
+import { Link } from "react-router-dom"
 
 const FirstPage = () => {
   const [shouldAnimate, setShouldAnimate] = useState(false)
@@ -40,6 +41,7 @@ const FirstPage = () => {
       <div className="row">
         <div className="col-6 nav justify-content-start align-items-center">
           <h1 className="pl-5 pt-4 pb-0">BOOKly</h1>
+          <Link to="/books">Books</Link>
         </div>
       </div>
       <div className="container">

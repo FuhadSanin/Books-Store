@@ -22,4 +22,30 @@ export default class BooksController {
     }
     res.json(response)
   }
+  static async apiSellBooks(req, res, next) {
+    try {
+      const title = req.body.title
+      const author = req.body.author
+      const discountedPrice = req.body.discount_price
+      const description = req.body.description
+      const imageUrl = req.body.image
+      const actualPrice = req.body.actual_price
+      const percentageOff = req.body.percentage_off
+
+      const bookinfo = await BooksDAO.sellBooks(
+        title,
+        author,
+        discountedPrice,
+        description,
+        imageUrl,
+        actualPrice,
+        percentageOff,
+      )
+
+      console.log("Received data:", req.body)
+      res.status(200).json({ status: "Add success" })
+    } catch (e) {
+      res.status(500).json({ error: e.message })
+    }
+  }
 }

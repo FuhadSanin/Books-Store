@@ -1,4 +1,4 @@
-import { default as FirstPage } from "./Landing-Page/FirstPage.jsx"
-import { default as SecondPage } from "./Landing-Page/SecondPage.jsx"
+import { default as Home } from "./Landing-Page/Home.jsx"
+import { default as Books } from "./Book-List/Books.jsx"
 
-export { FirstPage, SecondPage }
+export { Home, Books }
